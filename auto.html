@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Click Install</title>
+</head>
+<body>
+<script>
+window.addEventListener('load', function() {
+    function klikInstall() {
+        const btn = document.querySelector('button[aria-label="Instal"], button[aria-label="Install"]');
+        if (btn) {
+            btn.click();
+            console.log("Tombol diklik!");
+        } else {
+            setTimeout(klikInstall, 1000);
+        }
+    }
+    klikInstall();
+});
+</script>
+</body>
+</html>
